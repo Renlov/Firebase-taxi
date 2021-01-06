@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "671656063323",
+    "project_id": "fir-taxi-app-778db",
+    "storage_bucket": "fir-taxi-app-778db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671656063323:android:5651588d2edc122834ea7e",
+        "android_client_info": {
+          "package_name": "com.example.firebasetaxiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671656063323-t2o86rjljb25t5bt9a1pqucji5nlqbt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasetaxiapp",
+            "certificate_hash": "fad717379d5b2e3be591efcd5346733d19a89f1c"
+          }
+        },
+        {
+          "client_id": "671656063323-n6ndjlm6um29tnns9isnoad8me4jkif7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGEvf9kM2Labcat1wGOQ8eWPQvUSlj7xc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671656063323-n6ndjlm6um29tnns9isnoad8me4jkif7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
