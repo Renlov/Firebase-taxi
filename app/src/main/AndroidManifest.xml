@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseTaxiApp">
-        <activity android:name=".Activity.SingInActivity"></activity>
+        <activity android:name=".Activity.DriverSingInActivity"></activity>
+        <activity android:name=".Activity.PassengerSingInActivity" />
+        <activity android:name=".Activity.ChooseModeActivity" />
         <activity android:name=".Activity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

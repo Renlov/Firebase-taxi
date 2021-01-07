@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.firebasetaxiapp.R;
 
-public class SingInActivity extends AppCompatActivity {
+public class PassengerSingInActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sing_in);
+        setContentView(R.layout.activity_passenger_sing_in);
     }
 }

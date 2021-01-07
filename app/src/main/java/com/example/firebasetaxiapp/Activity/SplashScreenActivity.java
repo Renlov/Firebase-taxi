@@ -23,7 +23,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     e.printStackTrace();
                 } finally {
                     startActivity(new Intent(SplashScreenActivity.this,
-                            SingInActivity.class));
+                            ChooseModeActivity.class));
 
                 }
             }
