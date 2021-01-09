@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.firebasetaxiapp.R;
 import com.google.android.material.textfield.TextInputLayout;
@@ -87,6 +88,13 @@ public class DriverSingInActivity extends AppCompatActivity {
 
 
     public void loginSingUpUser(View view) {
+        if(!validateEmail() | !validateName() | !validatePassword()) {
+            return;
+        }
+        String userInput = "Email: " + textInputEmail.getEditText().toString().trim() +
+                "\n" + "Name: " + textInputName.getEditText().toString().trim() +
+                "\n" + "Password: " + textInputPassword.getEditText().toString().trim();
+        Toast.makeText(this, userInput, Toast.LENGTH_SHORT).show();
     }
 
     public void toggleLoginSingUp(View view) {
