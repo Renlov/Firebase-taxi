@@ -91,6 +91,7 @@ public class DriverSingInActivity extends AppCompatActivity {
         if(!validateEmail() | !validateName() | !validatePassword()) {
             return;
         }
+        //Не понимаю в чем ошибка
         String userInput = "Email: " + textInputEmail.getEditText().toString().trim() +
                 "\n" + "Name: " + textInputName.getEditText().toString().trim() +
                 "\n" + "Password: " + textInputPassword.getEditText().toString().trim();
