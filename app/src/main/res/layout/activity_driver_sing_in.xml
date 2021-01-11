@@ -74,7 +74,7 @@
     <Button
         android:id="@+id/loginSingUpButton"
         android:onClick="loginSingUpUser"
-        android:text="Sing Up"
+        android:text="Sing Up driver"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:backgroundTint="@color/black"
@@ -85,7 +85,7 @@
     <TextView
         android:id="@+id/toggleLoginSingUpTextView"
         android:onClick="toggleLoginSingUp"
-        android:text="Tap to log in"
+        android:text="Log in"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="2dp"
         android:textColor="@color/black"

@@ -21,6 +21,8 @@ public class DriverSingInActivity extends AppCompatActivity {
     private Button loginSingUpButton;
     private TextView toggleLoginSingUpTextView;
 
+    private boolean isLoginModeActive;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,5 +101,17 @@ public class DriverSingInActivity extends AppCompatActivity {
     }
 
     public void toggleLoginSingUp(View view) {
+
+        if(isLoginModeActive) {
+            isLoginModeActive = false;
+            loginSingUpButton.setText("Sing Up");
+            toggleLoginSingUpTextView.setText("Log In");
+            textInputConfirmPassword.setVisibility(View.VISIBLE);
+        } else {
+            isLoginModeActive = true;
+            loginSingUpButton.setText("Log In");
+            toggleLoginSingUpTextView.setText("Sing Up");
+            textInputConfirmPassword.setVisibility(View.GONE);
+        }
     }
 }

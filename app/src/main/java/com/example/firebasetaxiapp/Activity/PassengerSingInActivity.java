@@ -21,6 +21,8 @@ public class PassengerSingInActivity extends AppCompatActivity {
     private Button loginSingUpButton;
     private TextView toggleLoginSingUpTextView;
 
+    private boolean isLoginModeActive;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,5 +100,18 @@ public class PassengerSingInActivity extends AppCompatActivity {
     }
 
     public void toggleLoginSingUpPassenger(View view) {
+
+        if(isLoginModeActive) {
+            isLoginModeActive = false;
+            loginSingUpButton.setText("Sing Up");
+            toggleLoginSingUpTextView.setText("Log In");
+            textInputConfirmPassword.setVisibility(View.VISIBLE);
+        } else {
+            isLoginModeActive = true;
+            loginSingUpButton.setText("Log In");
+            toggleLoginSingUpTextView.setText("Sing Up");
+            textInputConfirmPassword.setVisibility(View.GONE);
+        }
     }
+
 }
