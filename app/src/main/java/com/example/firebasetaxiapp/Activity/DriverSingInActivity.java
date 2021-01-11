@@ -91,10 +91,10 @@ public class DriverSingInActivity extends AppCompatActivity {
         if(!validateEmail() | !validateName() | !validatePassword()) {
             return;
         }
-        //Не понимаю в чем ошибка
-        String userInput = "Email: " + textInputEmail.getEditText().toString().trim() +
-                "\n" + "Name: " + textInputName.getEditText().toString().trim() +
-                "\n" + "Password: " + textInputPassword.getEditText().toString().trim();
+
+        String userInput = "Email: " + textInputEmail.getEditText().getText().toString().trim() +
+                "\n" + "Name: " + textInputName.getEditText().getText().toString().trim() +
+                "\n" + "Password: " + textInputPassword.getEditText().getText().toString().trim();
         Toast.makeText(this, userInput, Toast.LENGTH_SHORT).show();
     }
 
