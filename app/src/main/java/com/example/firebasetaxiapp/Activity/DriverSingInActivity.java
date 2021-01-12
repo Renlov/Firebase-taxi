@@ -83,7 +83,6 @@ public class DriverSingInActivity extends AppCompatActivity {
     private boolean validatePassword() {
 
         String passwordInput = textInputPassword.getEditText().getText().toString();
-        String confirmPasswordInput = textInputConfirmPassword.getEditText().getText().toString();
 
         if(passwordInput.isEmpty()) {
             textInputPassword.setError("Please input your name");
@@ -91,7 +90,18 @@ public class DriverSingInActivity extends AppCompatActivity {
         } else if (passwordInput.length() < 7) {
             textInputPassword.setError("Password should be harder");
             return false;
-        } else if (!passwordInput.equals(confirmPasswordInput)) {
+        } else {
+            textInputPassword.setError("");
+            return true;
+        }
+    }
+
+    private boolean validateConfirmPassword() {
+
+        String passwordInput = textInputPassword.getEditText().getText().toString();
+        String confirmPasswordInput = textInputConfirmPassword.getEditText().getText().toString();
+
+        if (!passwordInput.equals(confirmPasswordInput)) {
             textInputPassword.setError("Password do not match");
             return false;
         }
@@ -131,6 +141,10 @@ public class DriverSingInActivity extends AppCompatActivity {
                         }
                     });
         } else {
+
+            if (!validateEmail() | !validateName() | !validatePassword() | !validateConfirmPassword()) {
+                return;
+            }
 
             auth.createUserWithEmailAndPassword(textInputEmail.getEditText().getText().toString().trim(),
                     textInputPassword.getEditText().getText().toString().trim())
