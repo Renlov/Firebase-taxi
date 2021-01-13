@@ -138,7 +138,7 @@ public class DriverSingInActivity extends AppCompatActivity {
                             }
 
                             // ...
-                        }
+                        } 
                     });
         } else {
 
