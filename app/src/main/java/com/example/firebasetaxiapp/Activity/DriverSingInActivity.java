@@ -3,6 +3,7 @@ package com.example.firebasetaxiapp.Activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -126,6 +127,7 @@ public class DriverSingInActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "signInWithEmail:success");
+                                startActivity(new Intent(DriverSingInActivity.this, DriverMapsActivity.class));
                                 FirebaseUser user = auth.getCurrentUser();
                                 //updateUI(user);
                             } else {
@@ -154,6 +156,7 @@ public class DriverSingInActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "createUserWithEmail:success");
+                                startActivity(new Intent(DriverSingInActivity.this, DriverMapsActivity.class));
                                 FirebaseUser user = auth.getCurrentUser();
                                 //updateUI(user);
                             } else {

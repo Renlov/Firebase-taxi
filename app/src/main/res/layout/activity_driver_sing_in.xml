@@ -71,26 +71,34 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/loginSingUpButton"
-        android:onClick="loginSingUpUser"
-        android:text="Sing Up driver"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:backgroundTint="@color/black"
-        android:layout_marginTop="300dp"
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_marginBottom="150dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/toggleLoginSingUpTextView"
-        android:onClick="toggleLoginSingUp"
-        android:text="Log in"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="2dp"
-        android:textColor="@color/black"
-        android:clickable="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/loginSingUpButton"
+            android:onClick="loginSingUpUser"
+            android:text="Sing Up driver"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:backgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/toggleLoginSingUpTextView"
+            android:onClick="toggleLoginSingUp"
+            android:text="Log in"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </LinearLayout>
