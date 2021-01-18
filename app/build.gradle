@@ -47,5 +47,19 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:17.1.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'com.google.maps.android:android-maps-utils:2.2.0'
+
+    implementation 'com.firebase:geofire-android:3.1.0'
+
+    // GeoFire utililty functions for Cloud Firestore users who
+    // want to implement their own geo solution, see:
+    // https://firebase.google.com/docs/firestore/solutions/geoqueries
+    implementation 'com.firebase:geofire-android-common:3.1.0'
+
+
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+
+    // Declare the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database'
 }
 
