@@ -48,6 +48,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -73,10 +74,22 @@ public class DriverMapsActivity extends FragmentActivity implements OnMapReadyCa
 
     private boolean isLocationActive;
 
+    FirebaseAuth auth;
+    FirebaseUser currentUser;
+
+    Button settingButton;
+    Button singOutButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_maps);
+
+        auth = FirebaseAuth.getInstance();
+        currentUser = auth.getCurrentUser();
+
+        settingButton = findViewById(R.id.settingsButton);
+        singOutButton = findViewById(R.id.singOutButton);
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
